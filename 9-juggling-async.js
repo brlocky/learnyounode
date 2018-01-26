@@ -15,13 +15,8 @@ urls.forEach((url, index) => {
 function callUrl(url, callback) {
     let result = ''
     http.get(url, (response) => {
-
         response.setEncoding('utf-8')
-
         response.on("data", (line) => result += line)
-
-        response.on("end", () => {
-            callback(result)
-        })
+        response.on("end", () => { callback(result) })
     }).on('error', console.error)
 }

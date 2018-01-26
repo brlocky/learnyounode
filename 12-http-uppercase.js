@@ -4,17 +4,11 @@ let http = require('http'),
 var server = http.createServer(function (req, res) {
 
     if (req.method == 'POST') {
-        var body = '',
-            uppercaseText = ''
+        var body = ''
 
         req.setEncoding('utf-8')
-        req.on('data', function (data) {
-            body += data;
-        });
-        req.on('end', function () {
-            body = body.toUpperCase();
-            res.end(body);
-        });
+        req.on('data', (data) => { body += data; });
+        req.on('end', () => { body = body.toUpperCase(); res.end(body); });
     }
     else
     {

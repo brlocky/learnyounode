@@ -1,0 +1,16 @@
+{
+  "name": "nodeschool",
+  "version": "1.0.0",
+  "description": "",
+  "main": "1-hello-world.js",
+  "dependencies": {
+    "dateformat": "^3.0.2",
+    "through2-map": "^3.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
